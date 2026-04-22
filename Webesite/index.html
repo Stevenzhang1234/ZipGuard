@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZipGuard Controller App</title>
+
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <header>
+
+    <h1>ZipGuard Bluetooth Controller</h1>
+
+    <span id="status" class="status disconnected">
+        Status: Disconnected
+    </span>
+
+    </header>
+
+
+    <section class="connection-panel">
+
+        <h2>Wireless Controls</h2>
+
+        <button id="bleConnectBtn" class="connect-btn">
+            Scan and Connect to Device via Bluetooth
+        </button>
+
+    </section>
+
+
+    <section class="controls">
+
+        <button id="lockBtn" class="btn lock-btn" disabled>
+            LOCK
+        </button>
+
+        <button id="unlockBtn" class="btn unlock-btn" disabled>
+            UNLOCK
+        </button>
+
+    </section>
+
+    <h3 id="lockLbl">Lock Mode: DISABLED</h3>
+
+    <input type="text" id="txtBox" placeholder="Passcode">
+
+    <div id="map" style="height: 400px;"></div>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+    <script>
+
+        let map = L.map('map').setView([40.744, -74.032], 15);
+
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19
+        }).addTo(map);
+
+        let marker = L.marker([40.744, -74.032]).addTo(map);
+
+        function updateLocation(lat, lng)
+        {
+            marker.setLatLng([lat, lng]);
+            map.setView([lat, lng], 15);
+        }
+
+    </script>
+
+    <script src="src/app.js"></script>
+
+    <footer>
+        <h2>© 2026 Urban Secure Systems.</h2>
+    </footer>
+
+</body>
+</html>

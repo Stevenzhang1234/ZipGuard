@@ -1,0 +1,185 @@
+body {
+
+    font-family: Arial, sans-serif;
+    background: #1a1a2e;
+    color: white;
+
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+header {
+
+    width: 100%;
+
+    background: #16213e;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header h1 {
+
+    margin: 15px;
+
+    font-size: 36px;
+
+}
+
+footer {
+
+    text-align: center;
+    border-top: 2px solid #628bb4;
+    font-size: 12px;
+
+}
+
+.status {
+
+    padding: 8px 12px;
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    margin: 15px;
+
+}
+
+.status.connecting {
+
+    background: #e9e945;
+    color: black;
+
+}
+
+.status.disconnected {
+
+    background: #e94560;
+
+}
+
+
+.status.connected {
+
+    background: #2ecc71;
+    color: black;
+
+}
+
+
+/* CONNECTION PANEL */
+
+.connection-panel {
+
+    margin-top: 30px;
+    text-align: center;
+    font-size: 24px;
+
+}
+
+
+.connect-btn {
+
+    padding: 12px 25px;
+
+    font-size: 20px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    background: #0f3460;
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+.connect-btn:hover {
+
+    background: #1a4f8a;
+
+}
+
+
+/* CONTROL BUTTONS */
+
+.controls {
+
+    margin-top: 40px;
+
+    display: flex;
+
+    gap: 20px;
+
+}
+
+
+.btn {
+
+    width: 150px;
+
+    padding: 18px;
+
+    font-size: 20px;
+
+    border-radius: 12px;
+
+    border: none;
+
+    cursor: pointer;
+
+}
+
+
+.lock-btn {
+
+    background: #e94560;
+    color: white;
+
+}
+
+
+.unlock-btn {
+
+    background: #2ecc71;
+    color: black;
+
+}
+
+.lockLbl {
+
+    margin-top: 20px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+input[type="text"]:focus {
+
+    border-color: #007BFF;
+    outline: none; /* Removes default browser outline */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+
+}
+
+input[type="text"], textarea {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.btn:disabled {
+
+    opacity: 0.4;
+    cursor: not-allowed;
+
+}
